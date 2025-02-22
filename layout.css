@@ -12,13 +12,14 @@ body{
     width: 340px;
     height: 500px;
     background: #aea6a6;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 4px 10px rgba(10, 10, 10, 0.2);
     display: flex;
     flex-direction: column; /* Aligns items top to bottom*/
     justify-content: flex-start;
     align-items: center;
     padding: 20px;
+   
 }
 
 /*Button container*/
@@ -26,11 +27,10 @@ body{
     display: grid;
     grid-template-columns: repeat(4, 1fr); /*Creates 4 Columns*/
     gap: 20px; /*Space between buttons*/
-    width: 100%;
 }
 
 .numberButton{
-    width: 60px;
+    width: 100% !important;
     height: 50px;
     background: rgb(143, 137, 137);
     display: flex;
@@ -39,15 +39,25 @@ body{
     font-size: 20px;
     font-weight: bold;
     color: white;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
+    transition: background-color 0.2s ease;
 }
+.numberButton:hover{
+    background-color: #a39e9e !important;
+}
+
+.numberButton:active{
+    background-color: #8a8484 !important;
+    transform: scale(0.95);
+}
+
 
 .display{
     width: 100%;
-    height: 50px;
+    height: 80px;
     background: rgb(255, 255, 255);
-    border-radius: 5px;
+    border-radius: 15px;
     margin-bottom: 20px;
     padding: 10px;
     font-size: 32px;
@@ -69,9 +79,34 @@ body{
     justify-content: center;
     display: flex;
     cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 20px;
+}
+
+.operatorButton:hover{
+    background-color: #e08500 !important;
+}
+
+.operatorButton:active{
+    background-color: #ff9500 !important;
+    font-weight: bold;
+    transform: scale(0.95);
 }
 
 .zero{
     grid-column: span 2;
     width: auto !important;
+}
+
+.equals{
+    background-color: #007AFF;
+    transition: all 0.2s ease;
+}
+
+.equals:hover{
+    background-color: #0069d1 !important;
+}
+
+.equals:active{
+    background-color: #0051a8 !important;
 }
